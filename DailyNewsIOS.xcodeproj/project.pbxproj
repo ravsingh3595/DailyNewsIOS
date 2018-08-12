@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3223AFF9ACEC8571C36E14 /* Pods_DailyNewsIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C91768BF38C419CC339460 /* Pods_DailyNewsIOS.framework */; };
+		CE7FE113211FB7100062FF1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FE112211FB7100062FF1E /* LoginViewController.swift */; };
 		CEFC6BC5211FB2C700CB0F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC6BC4211FB2C700CB0F14 /* AppDelegate.swift */; };
 		CEFC6BC7211FB2C700CB0F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC6BC6211FB2C700CB0F14 /* ViewController.swift */; };
 		CEFC6BCA211FB2C700CB0F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFC6BC8211FB2C700CB0F14 /* Main.storyboard */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84C91768BF38C419CC339460 /* Pods_DailyNewsIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNewsIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2EE222565FF107079166D0B /* Pods-DailyNewsIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyNewsIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyNewsIOS/Pods-DailyNewsIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CE7FE112211FB7100062FF1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEFC6BC1211FB2C700CB0F14 /* DailyNewsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyNewsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC6BC4211FB2C700CB0F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFC6BC6211FB2C700CB0F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		CEFC6BCE211FB2C900CB0F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEFC6BD1211FB2C900CB0F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEFC6BD3211FB2C900CB0F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1614050AADDAF27BD224B2D /* Pods-DailyNewsIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyNewsIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyNewsIOS/Pods-DailyNewsIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3223AFF9ACEC8571C36E14 /* Pods_DailyNewsIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0ED296F41E2354028F9EF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2EE222565FF107079166D0B /* Pods-DailyNewsIOS.debug.xcconfig */,
+				E1614050AADDAF27BD224B2D /* Pods-DailyNewsIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B42A14D0665780D31623F767 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84C91768BF38C419CC339460 /* Pods_DailyNewsIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE7FE111211FB6DA0062FF1E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FE112211FB7100062FF1E /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		CEFC6BB8211FB2C700CB0F14 = {
 			isa = PBXGroup;
 			children = (
+				CE7FE111211FB6DA0062FF1E /* ViewController */,
 				CEFC6BC3211FB2C700CB0F14 /* DailyNewsIOS */,
 				CEFC6BC2211FB2C700CB0F14 /* Products */,
+				8D0ED296F41E2354028F9EF5 /* Pods */,
+				B42A14D0665780D31623F767 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEFC6BD6211FB2C900CB0F14 /* Build configuration list for PBXNativeTarget "DailyNewsIOS" */;
 			buildPhases = (
+				430439137CEAE80050A80AD1 /* [CP] Check Pods Manifest.lock */,
 				CEFC6BBD211FB2C700CB0F14 /* Sources */,
 				CEFC6BBE211FB2C700CB0F14 /* Frameworks */,
 				CEFC6BBF211FB2C700CB0F14 /* Resources */,
+				CAE6D05E4D5B969B278AD086 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +170,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		430439137CEAE80050A80AD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyNewsIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE6D05E4D5B969B278AD086 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DailyNewsIOS/Pods-DailyNewsIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyNewsIOS/Pods-DailyNewsIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEFC6BBD211FB2C700CB0F14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7FE113211FB7100062FF1E /* LoginViewController.swift in Sources */,
 				CEFC6BC7211FB2C700CB0F14 /* ViewController.swift in Sources */,
 				CEFC6BC5211FB2C700CB0F14 /* AppDelegate.swift in Sources */,
 				CEFC6BCD211FB2C700CB0F14 /* DailyNewsIOS.xcdatamodeld in Sources */,
@@ -282,6 +359,7 @@
 		};
 		CEFC6BD7211FB2C900CB0F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2EE222565FF107079166D0B /* Pods-DailyNewsIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +378,7 @@
 		};
 		CEFC6BD8211FB2C900CB0F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1614050AADDAF27BD224B2D /* Pods-DailyNewsIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
