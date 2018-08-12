@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C3223AFF9ACEC8571C36E14 /* Pods_DailyNewsIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C91768BF38C419CC339460 /* Pods_DailyNewsIOS.framework */; };
 		CE7FE113211FB7100062FF1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FE112211FB7100062FF1E /* LoginViewController.swift */; };
+		CE7FE115211FCFA90062FF1E /* TopNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FE114211FCFA90062FF1E /* TopNewsViewController.swift */; };
+		CE7FE118212002F20062FF1E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FE117212002F20062FF1E /* NewsCell.swift */; };
 		CEFC6BC5211FB2C700CB0F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC6BC4211FB2C700CB0F14 /* AppDelegate.swift */; };
 		CEFC6BC7211FB2C700CB0F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC6BC6211FB2C700CB0F14 /* ViewController.swift */; };
 		CEFC6BCA211FB2C700CB0F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFC6BC8211FB2C700CB0F14 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 		84C91768BF38C419CC339460 /* Pods_DailyNewsIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNewsIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EE222565FF107079166D0B /* Pods-DailyNewsIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyNewsIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyNewsIOS/Pods-DailyNewsIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CE7FE112211FB7100062FF1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE7FE114211FCFA90062FF1E /* TopNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsViewController.swift; sourceTree = "<group>"; };
+		CE7FE117212002F20062FF1E /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		CEFC6BC1211FB2C700CB0F14 /* DailyNewsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyNewsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC6BC4211FB2C700CB0F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFC6BC6211FB2C700CB0F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,13 +69,23 @@
 			isa = PBXGroup;
 			children = (
 				CE7FE112211FB7100062FF1E /* LoginViewController.swift */,
+				CE7FE114211FCFA90062FF1E /* TopNewsViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE7FE116212002BD0062FF1E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FE117212002F20062FF1E /* NewsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CEFC6BB8211FB2C700CB0F14 = {
 			isa = PBXGroup;
 			children = (
+				CE7FE116212002BD0062FF1E /* Cell */,
 				CE7FE111211FB6DA0062FF1E /* ViewController */,
 				CEFC6BC3211FB2C700CB0F14 /* DailyNewsIOS */,
 				CEFC6BC2211FB2C700CB0F14 /* Products */,
@@ -217,6 +231,8 @@
 				CE7FE113211FB7100062FF1E /* LoginViewController.swift in Sources */,
 				CEFC6BC7211FB2C700CB0F14 /* ViewController.swift in Sources */,
 				CEFC6BC5211FB2C700CB0F14 /* AppDelegate.swift in Sources */,
+				CE7FE115211FCFA90062FF1E /* TopNewsViewController.swift in Sources */,
+				CE7FE118212002F20062FF1E /* NewsCell.swift in Sources */,
 				CEFC6BCD211FB2C700CB0F14 /* DailyNewsIOS.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
