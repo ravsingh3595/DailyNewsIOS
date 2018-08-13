@@ -221,15 +221,58 @@
                                         <string>Sports</string>
                                         <string>Business</string>
                                     </scopeButtonTitles>
+                                    <connections>
+                                        <outlet property="delegate" destination="q6g-aT-r27" id="n6Q-VH-mjy"/>
+                                    </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" id="E5F-8s-1z3">
-                                        <rect key="frame" x="0.0" y="84" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="searchResultCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" rowHeight="222" id="E5F-8s-1z3" customClass="SearchBarNewsCell" customModule="DailyNewsIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="375" height="222"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E5F-8s-1z3" id="dTG-SL-vdV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="221.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTH-ep-Iof">
+                                                    <rect key="frame" x="15" y="11" width="345" height="200"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i3c-5T-P6T">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="150"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="150" id="QOC-WQ-Q20"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Ci-Nl-MDg">
+                                                            <rect key="frame" x="20" y="155" width="305" height="40"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                            <color key="textColor" red="0.51372549020000002" green="0.094117647060000004" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="8Ci-Nl-MDg" firstAttribute="leading" secondItem="iTH-ep-Iof" secondAttribute="leading" constant="20" id="BFK-aN-afr"/>
+                                                        <constraint firstAttribute="height" constant="200" id="FAG-L0-wWh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="8Ci-Nl-MDg" secondAttribute="bottom" constant="5" id="JjS-Xs-3QB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8Ci-Nl-MDg" secondAttribute="trailing" constant="20" id="U2l-EG-4gT"/>
+                                                        <constraint firstItem="i3c-5T-P6T" firstAttribute="leading" secondItem="iTH-ep-Iof" secondAttribute="leading" id="UyA-9l-1ID"/>
+                                                        <constraint firstItem="8Ci-Nl-MDg" firstAttribute="top" secondItem="i3c-5T-P6T" secondAttribute="bottom" constant="5" id="VKp-QY-i0c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="i3c-5T-P6T" secondAttribute="trailing" id="pAK-kC-6yk"/>
+                                                        <constraint firstItem="i3c-5T-P6T" firstAttribute="top" secondItem="iTH-ep-Iof" secondAttribute="top" id="yjQ-fD-epi"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.51372549020000002" green="0.094117647060000004" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="iTH-ep-Iof" firstAttribute="leading" secondItem="dTG-SL-vdV" secondAttribute="leadingMargin" id="4Mg-rg-gdB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iTH-ep-Iof" secondAttribute="trailing" id="qC5-ur-J7a"/>
+                                                <constraint firstItem="iTH-ep-Iof" firstAttribute="top" secondItem="dTG-SL-vdV" secondAttribute="topMargin" id="wsI-A9-Hqs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgSearchBar" destination="i3c-5T-P6T" id="EPQ-ee-6Ak"/>
+                                            <outlet property="lblSearchBar" destination="8Ci-Nl-MDg" id="YPj-wU-ijE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -252,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6y9-F4-Ese" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2767" y="-199"/>
+            <point key="canvasLocation" x="2765.5999999999999" y="-199.50738916256159"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KrY-oC-twl">
@@ -349,7 +392,6 @@
         <image name="BackGround.jpeg" width="800" height="1067"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="i7v-NR-hYq"/>
         <segue reference="7tm-S3-VJ9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        if txtEmail.text == "admin" && txtPassword.text == "qw"
+        if txtEmail.text == "admin" && txtPassword.text == "admin123"
         {
             if self.switchRememberMe.isOn
             {
@@ -58,14 +58,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
