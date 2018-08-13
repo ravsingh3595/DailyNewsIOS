@@ -1,4 +1,4 @@
-//
+
 //  TopNewsViewController.swift
 //  DailyNewsIOS
 //
@@ -11,14 +11,9 @@ import Alamofire
 
 class TopNewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
     @IBOutlet weak var topNewsTableView: UITableView!
-    
-    //var allTitle: Dictionary<String, Any>!
-    //var dataFromJson: Dictionary<String, Any>!
-    
+
     var newsArray: [Dictionary<String, Any>] = []
-    var newsDictionary: Dictionary<String, Any>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +22,7 @@ class TopNewsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         topNewsTableView.dataSource = self
         topNewsTableView.delegate = self
+        
         getData {
             self.topNewsTableView.reloadData()
         }
@@ -37,15 +33,15 @@ class TopNewsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getData(completed : @escaping downloadData){
-        Alamofire.request("https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=0a121c964a604666bf93c55b45ad4f60").responseJSON{ response in
-            // print(response)
+        Alamofire.request("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0a121c964a604666bf93c55b45ad4f60").responseJSON{ response in
+             //print(response)
             
             if let data = response.result.value
             {
                 let dataFromJson: Dictionary = data as! Dictionary<String, Any>
                 self.newsArray = dataFromJson["articles"] as! [Dictionary<String, Any>]
                 //print(dataFromJson)
-                print("====================")
+                
             }
         completed()
         
@@ -66,28 +62,18 @@ class TopNewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! NewsCell
-        
-        cell.configureCell(imageUrl: newsArray[indexPath.row]["urlToImage"] as! String, text: newsArray[indexPath.row]["title"] as! String)
-//        for values in newsArray
-//        {
-//            newsDictionary = values
-//        }
-//        for (key, value) in newsDictionary {
-//            if key == "title"{
-//             = "\(value)"
-//                //print(cell.textLabel?.text)
-//
-//            }
-//        }
-//
-        
-//        cell.textLabel?.text = newsArray[indexPath.row]["title"] as! String
-//        cell.imageView?.downloadImage(from: newsArray[indexPath.row]["urlToImage"] as! String)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as? NewsCell
+        {
+            cell.configureCell(imageUrl: newsArray[indexPath.row]["urlToImage"] as! String, text: newsArray[indexPath.row]["title"] as! String)
+            return cell
+        }
+        else
+        {
+            return UITableViewCell()
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(250)
+        return CGFloat(200)
     }
     
     
@@ -128,7 +114,6 @@ extension UIImageView{
                 self.image = UIImage(data : data!)
                 
             }
-            
         }
         
         task.resume()
